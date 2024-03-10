@@ -3,9 +3,8 @@ import random
 
 colors = ["red", "orange", "yellow", "green", "blue", "purple"]
 
-t = Turtle()
+
 screen = Screen()
-t.hideturtle()
 screen.setup(500,400)
 user_choice = screen.textinput("Bet Now!", prompt="Which turtle will win the race? Enter a color: ").lower()
 all_turtles = []
