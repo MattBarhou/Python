@@ -41,6 +41,14 @@ class Snake:
             new_y = self.all_turtles[s - 1].ycor()
             self.all_turtles[s].goto(new_x, new_y)
         self.all_turtles[0].forward(20)
+        
+    def reset(self):
+        #clear the old snake and move it off the screen, then create a new snake
+        for s in self.all_turtles:
+            s.goto(1000, 1000)
+        self.all_turtles.clear()
+        self.create_snake()
+        self.head = self.all_turtles[0]
             
     def up(self):
         if self.head.heading() != DOWN:
